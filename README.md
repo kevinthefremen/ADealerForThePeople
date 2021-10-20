@@ -2,14 +2,17 @@
 This project scrapes reviews on DealerRater.com for McKaig Chevrolet Buick to uncover the most overly positive comments.
 
 ## Positivity Criteria
-In order to determine the most overly positive comments first all the reviews are gathered.
+In order to determine the most overly positive comments the first five pages of reviews is gathered.
 Once gathered, the reviews are sorted based on the number of '!' in the review.
 The top 3 reviews based on the number of '!' are returned to the console in ranked order.
 
-## Running the Project
-This project is developed in python3 with dependencies installed using pip.
+This was determined based on a visual inspection of the reviews. It appeared that the reviews with more '!' stood out
+at first glance. These reviews would likely draw unwanted attention to the dealership.
 
-In order to run the project, first the necessary dependencies must be installed. 
+## Running the Project
+This project is developed using python3 with dependencies installed using pip.
+
+In order to run the project the necessary dependencies must be installed. 
 This can be done by executing the following command at from the root directory:
 ```pip install -r requirements.txt```
 
@@ -23,7 +26,7 @@ MacOs/Linux:
 ```python3 src/a_dealer_for_the_people.py```
 
 
-NOTE: This project was developed on a Windows machine.
+**NOTE**: This project was developed and tested on a Windows machine.
 
 ## Running the Test Suite
 Unit tests for this project were developed using the python3 unittest module.

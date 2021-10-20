@@ -9,9 +9,9 @@ def main():
     overly_positive_reviews = identify_overly_positive_reviews(reviews)
     message = f'''The following reviews present a risk for project McKaig Chevrolet Buick: A Dealer For The People. 
 These reviews should be removed immediately.
-    1. {overly_positive_reviews[0]}
-    2. {overly_positive_reviews[1]}
-    3. {overly_positive_reviews[2]}'''
+    1. "{overly_positive_reviews[0]}"
+    2. "{overly_positive_reviews[1]}"
+    3. "{overly_positive_reviews[2]}"'''
     print(message)
 
 

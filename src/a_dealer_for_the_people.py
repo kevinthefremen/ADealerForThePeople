@@ -5,8 +5,10 @@ from positive_review_finder import PositiveReviewFinder
 def main():
     base_url = "https://www.dealerrater.com/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-dealer-reviews-23685"
     pages_to_scrape = 5
+
     reviews = scrape_for_reviews(base_url, pages_to_scrape)
     overly_positive_reviews = identify_overly_positive_reviews(reviews)
+
     message = f'''The following reviews present a risk for project McKaig Chevrolet Buick: A Dealer For The People. 
 These reviews should be removed immediately.
     1. "{overly_positive_reviews[0]}"
@@ -25,8 +27,6 @@ def identify_overly_positive_reviews(reviews):
 def scrape_for_reviews(base_url, pages_to_scrape):
     website_review_scraper = ReviewScraper(base_url)
     reviews = website_review_scraper.scrape_pages_for_reviews(pages_to_scrape)
-    if len(reviews) == 0:
-        print(f'It appears there are no reviews. Please verify the dealership URL: {base_url}')
     return reviews
 
 

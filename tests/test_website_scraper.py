@@ -16,7 +16,7 @@ class MyTestCase(unittest.TestCase):
         reviews_text = scrape_page_for_paragraph_text_by_class(self.base_url, "review-content")
 
         self.assertEqual(len(reviews_text), 10)
-        self.assertIn('We had a great experience with Tito!', reviews_text[0])
+        self.assertTrue(type(reviews_text[0]) is str)
 
     def test_scrape_invlaid_url(self):
         self.assertRaises(MissingSchema,

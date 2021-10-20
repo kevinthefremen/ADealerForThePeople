@@ -1,4 +1,6 @@
 # ADealerForThePeople
+***Author: Kevin Castell***
+
 This project scrapes reviews on DealerRater.com for McKaig Chevrolet Buick to uncover the most overly positive comments.
 
 ## Positivity Criteria
@@ -6,7 +8,7 @@ In order to determine the most overly positive comments the first five pages of 
 Once gathered, the reviews are sorted based on the number of '!' in the review.
 The top 3 reviews based on the number of '!' are returned to the console in ranked order.
 
-This was determined based on a visual inspection of the reviews. It appeared that the reviews with more '!' stood out
+This metric was determined based on a visual inspection of a subset of the reviews. It appeared that the reviews with more '!' stood out
 at first glance. These reviews would likely draw unwanted attention to the dealership.
 
 ## Running the Project
